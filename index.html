@@ -52,10 +52,10 @@
 				}
 			@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 				#action {
-					margin-top: 10px 5px 0 5px;
+					margin: 10px 5px 0 5px;
 					font-size: 2.6em;
 				}
-				#new-sentence { font-size: .9em; }
+				#new-sentence { font-size: .95em; }
 				#new-input { width: 305px; }
 			}
 		</style>
@@ -97,6 +97,7 @@
 							ajax.post( sEndpoint, { action: sValue } );
 							oNewSentence.className = 'hidden';
 							oSubmitNew.className = oSubmitNew.className.replace( 'hidden', '' );
+							oNewInput.value = '';
 						}
 						eEvent.preventDefault();
 					};
