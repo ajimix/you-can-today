@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>Do something everyday</title>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+		<style type="text/css">
+			/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+			article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+			.hidden { display: none !important; }
+			input { outline: none; }
+			body {
+				background-color: #517ab8;
+				color: #FFF;
+				font-family: 'Pacifico', cursive;
+			}
+			#wrapper { text-align: center; }
+			#action {
+				margin-top: 150px;
+				font-size: 3em;
+			}
+			#new-sentence {
+				margin-top: 30px;
+				font-size: 1.3em;
+			}
+			#new-input {
+				width: 415px;
+				border: 0;
+				border-bottom: 3px dashed #FFF;
+				background-color: transparent;
+				color: #DAF3FF;
+			}
+			::-webkit-input-placeholder { color: #DAF3FF; }
+			#submit-action { width: 220px; }
+			.action-button {
+				display: block;
+				margin: 50px auto;
+				padding: 10px 40px;
+				width: 150px;
+				border-bottom: 5px solid #669644;
+				border-radius: 10px;
+				background-color: #82BF56;
+				color: #FFF;
+				text-decoration: none;
+				text-shadow: 0px -2px #669644;
+				font-size: 25px;
+				-webkit-transition: all 0.1s;
+				transition: all 0.1s;
+			}
+				.action-button:active {
+					top: 5px;
+					border-bottom: 0px solid;
+				}
+		</style>
+		<script>
+			// Qwest for amazing ajax https://github.com/pyrsmk/qwest
+			this.ajax=function(){var q=function(e,g,b,d,q){b=b||null;d=d||{};var t=window,u=!1,a=t.XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP"),v=""===a.responseType,l=void 0===d.async?!0:!!d.async,D=!!d.cache,k=d.type?d.type.toLowerCase():"json",E=d.user||"";d=d.password||"";var r={"X-Requested-With":"XMLHttpRequest"},h="",m,p,w=[],x=[],y=[],f,z,A,n,s={success:function(c){l?w.push(c):z&&c.apply(a,[f]);return s},error:function(c){l?x.push(c):A&&c.apply(a,[f]);return s},complete:function(c){l?y.push(c):c.apply(a);return s}},B=function(){var c;try{if(200!=a.status)throw a.status+" ("+a.statusText+")";var b=a.responseText;if("text"==k||"html"==k)f=b;else if(u&&void 0!==a.response)f=a.response;else switch(k){case "json":try{f=t.JSON?t.JSON.parse(b):eval("("+b+")")}catch(d){throw"Error while parsing JSON body";}break;case "js":f=eval(b);break;case "xml":if(!a.responseXML||a.responseXML.parseError&&a.responseXML.parseError.errorCode&&a.responseXML.parseError.reason)throw"Error while parsing XML body";f=a.responseXML;break;default:throw"Unsupported "+k+" type";}z=!0;if(l)for(c=0;n=w[c];++c)n.apply(a,[f])}catch(e){if(A=!0,f="Request to '"+g+"' aborted: "+e,l)for(c=0;n=x[c];++c)n.apply(a,[f])}if(l)for(c=0;n=y[c];++c)n.apply(a)};k&&v&&(a.responseType=k,u=a.responseType==k);if(b instanceof ArrayBuffer||b instanceof Blob||b instanceof Document||b instanceof FormData)"GET"==e&&(b=null);else{p=[];var C=encodeURIComponent;for(m in b)p.push(C(m)+"="+C(b[m]));b=p.join("&");p=!0}"GET"==e&&(h+=b);D||(h&&(h+="&"),h+="t="+Date.now());h&&(g+=(/\?/.test(g)?"&":"?")+h);a.open(e,g,l,E,d);v?a.onload=B:a.onreadystatechange=function(){4==a.readyState&&B()};p&&"POST"==e&&(r["Content-Type"]="application/x-www-form-urlencoded");r.Accept={xml:"application/xml, text/xml",html:"text/html",text:"text/plain",json:"application/json, text/javascript",js:"application/javascript, text/javascript"}[k];for(m in r)a.setRequestHeader(m,r[m]);q&&q.apply(a);a.send("POST"==e?b:null);return s};return{get:function(e,g,b,d){return q("GET",e,g,b,d)},post:function(e,g,b,d){return q("POST",e,g,b,d)}}}();
+		</script>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="action"></div>
+			<div id="new-action">
+				<a href="#" id="submit-new" class="action-button">Submit new</a>
+				<div id="new-sentence" class="hidden">
+					You can <input type="text" id="new-input" placeholder="take a picture of yourself hugging some stranger" maxlength="100" /> today.<br />
+					<a href="#" id="submit-action" class="action-button">Let the others know</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			( function( doc ) {
+				var fpId = function( sId ) { return doc.getElementById( sId ); },
+					fpOn = function( sEvent, oElement, fpCallback ) { oElement.addEventListener( sEvent, fpCallback, false ); },
+					sEndpoint = '/action',
+					oSubmitNew = fpId( 'submit-new' ),
+					oNewInput = fpId( 'new-input' ),
+					oSubmitAction = fpId( 'submit-action' ),
+					oNewSentence = fpId( 'new-sentence' ),
+					fpSubmitNewClick = function( eEvent ) {
+						oSubmitNew.className += ' hidden';
+						oNewSentence.className = '';
+						eEvent.preventDefault();
+					},
+					fpSubmitActionClick = function( eEvent ) {
+						var sValue = oNewInput.value;
+						if ( sValue !== '' && sValue.length <= 100 ) {
+							ajax.post( sEndpoint, { action: sValue } );
+							oNewSentence.className = 'hidden';
+							oSubmitNew.className = oSubmitNew.className.replace( 'hidden', '' );
+						}
+						eEvent.preventDefault();
+					};
+
+				ajax.get( sEndpoint ).success( function( oResponse ) {
+					fpId( 'action' ).innerText = 'You can ' + oResponse.action + ' today.';
+				} );
+
+				fpOn( 'click', oSubmitNew, fpSubmitNewClick );
+				fpOn( 'click', oSubmitAction, fpSubmitActionClick );
+			}( document ) );
+		</script>
+	</body>
+</html>
