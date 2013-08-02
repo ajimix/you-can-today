@@ -147,7 +147,7 @@
 	/**
 	 * Server initialization.
 	 */
-	oServer.listen( 80, function() {
+	oServer.listen( process.env.PORT || 8080, function() {
 		console.log( '%s listening at %s', oServer.name, oServer.url );
 	} );
 }( require ) );
