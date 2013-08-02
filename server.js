@@ -147,7 +147,7 @@
 	/**
 	 * Server initialization.
 	 */
-	oServer.listen( 8080, function() {
+	oServer.listen( 80, function() {
 		console.log( '%s listening at %s', oServer.name, oServer.url );
 	} );
 }( require ) );
