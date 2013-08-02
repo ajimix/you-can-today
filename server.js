@@ -122,7 +122,7 @@
 	/**
 	 * Mongo DB connection.
 	 */
-	oMongoose.connect( 'mongodb://localhost/you-can-today' );
+	oMongoose.connect( process.env.MONGOLAB_URI || 'mongodb://localhost/you-can-today' );
 	oDb.on( 'error', console.error.bind( console, 'Connection error:' ) );
 	oDb.once( 'open', function callback () {
 		console.log( 'Connection to mongodb succesfull' );
