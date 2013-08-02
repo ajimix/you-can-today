@@ -1,0 +1,12 @@
+{
+	"name": "you-can-today",
+	"description": "Do something different everyday",
+	"author": "ajimix <ajimix@gmail.com>",
+	"dependencies": {
+		"mongoose": ">= 3.6.15",
+		"restify": ">= 2.6.0"
+	},
+	"engines": {
+		"node": ">= 0.10.15"
+	}
+}
